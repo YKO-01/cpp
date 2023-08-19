@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 23:41:52 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/13 14:58:55 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/08/16 12:59:59 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/08/17 11:31:42 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
-#include <string>
-
+#include <cmath>
 
 class Fixed
 {
@@ -24,11 +23,28 @@ class Fixed
 		static const int raw;
 	public :
 		Fixed();
+		Fixed(const int fixed_point);
+		Fixed(const float fixed_point);
 		Fixed(const Fixed& copy);
 		~Fixed();
-		Fixed& operator = (const Fixed& copy);
 		int		getRawBits (void);
-		void	setRawBits(int const raw);		
+		void	setRawBits(int const raw);
+		float	toFloat(void) const ;
+		int		toInt(void) const;	
+		Fixed& operator = (const Fixed& copy);
+		friend std::ostream& operator << (std::ostream& out, const Fixed& fixed);
+		// arithmetic opreators
+		Fixed operator + (const Fixed& fixed);
+		Fixed operator - (const Fixed& fixed);
+		Fixed operator * (const Fixed& fixed);
+		Fixed operator / (const Fixed& fixed);
+		// increment & decrement operators
+		Fixed operator ++ ();
+		Fixed operator -- ();
+		Fixed operator ++ (int);
+		Fixed operator -- (int);
 };
+
+
 
 #endif

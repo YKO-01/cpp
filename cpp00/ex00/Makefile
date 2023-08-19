@@ -6,7 +6,7 @@
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/05 10:36:50 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/07/05 11:10:15 by ayakoubi         ###   ########.fr        #
+#    Updated: 2023/08/16 11:42:31 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,22 +15,33 @@ NAME	= megaphone
 SRC		= megaphone.cpp
 OBJ		= $(SRC:.cpp=.o)
 
-CC		=	c++
-CFLAGS	= -Wall -Wextra -Werror
+CPP		=	c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-#%.o : %.cpp
-#	$(CC) $(CFALGS) $^ -o
+RED = \033[1;31m
+GREEN = \033[1;32m
+SPLASH = \033[5m
+BLUE = \033[1;34m
+YELLOW = \033[1;33m
+RESET = \033[0m
+
+%.o : %.cpp
+	@$(CPP) $(CPPFALGS) -c $< -o $@
+	@echo "$(YELLOW) compile >>>> $< $(RESET)"
 
 $(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) $^ -o $@
+	@$(CPP) $(CPPFLAGS) $^ -o $@
+	@echo "$(GREEN) ------ Built success ------ $(RESET)"
 
 all : $(NAME)
 
 clean :
-	rm -rf $(OBJ)
+	@echo "$(RED) REMOVED OBJ $(RESET)"
+	@rm -rf $(OBJ)
 
-fclean :
-	rm -rf $(OBJ) $(NAME)
+fclean : clean
+	@echo "$(RED) REMOVED $(NAME) $(RESET)"
+	@rm -rf $(NAME)
 
 re : fclean all
 

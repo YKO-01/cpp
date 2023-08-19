@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 10:18:06 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/07/23 19:46:23 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/16 10:52:28 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main()
 	{
 		std::cout << "enter your choise : ";
 		std::cin >> ch;
+		std::cout << "\n";
 		if (i >= 8)
 			i = 7;
 		if (ch == "ADD")

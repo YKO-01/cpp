@@ -5,19 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/02 13:31:00 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/08/16 11:42:31 by ayakoubi         ###   ########.fr        #
+#    Created: 2023/08/16 12:57:40 by ayakoubi          #+#    #+#              #
+#    Updated: 2023/08/17 10:42:58 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	zombie
+NAME = fixed
 
-CPP			=	c++
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CPP = c++
+CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC			:=	main Zombie zombieHorde
-OBJ			:=	$(addsuffix .o, $(SRC));
-SRC			:=	$(addsuffix .cpp, $(SRC));
+SRC := main Fixed operators
+
+OBJ	:= $(addsuffix .o, $(SRC))
+SRC := $(addsuffix .cpp, $(SRC))
 
 RED = \033[1;31m
 GREEN = \033[1;32m

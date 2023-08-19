@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 19:51:38 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/07/26 15:09:46 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/16 11:05:33 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,26 @@ void	PhoneBook::ADD(int i)
 	std::string	var;
 
 	std::cout << "enter your first name : ";
+	fflush(stdin);
 	std::getline(std::cin, var);
-	contact[i].set_firstname(var);
+	if (!var.empty())
+		contact[i].set_firstname(var);
 	std::cout << "enter your last name : ";
 	std::getline(std::cin, var);
-	contact[i].set_lastname(var);
+	if (!var.empty())
+		contact[i].set_lastname(var);
 	std::cout << "enter your neck name : ";
 	std::getline(std::cin, var);
-	contact[i].set_neckname(var);
+	if (!var.empty())
+		contact[i].set_neckname(var);
 	std::cout << "enter your phone number : ";
 	std::getline(std::cin, var);
-	contact[i].set_phonenumber(var);
+	if (!var.empty())
+		contact[i].set_phonenumber(var);
 	std::cout << "enter your darket secret : ";
 	std::getline(std::cin, var);
-	contact[i].set_secret(var);
+	if (!var.empty())
+		contact[i].set_secret(var);
 }
 
 void	PhoneBook::display_contact(int i)
