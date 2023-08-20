@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 10:18:06 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/16 10:52:28 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/20 10:12:02 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	PhoneBook phone;
 
 	i = 0;
-	while (1)
+	while (1 && !std::cin.eof())
 	{
 		std::cout << "enter your choise : ";
 		std::cin >> ch;

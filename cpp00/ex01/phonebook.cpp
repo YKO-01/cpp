@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 19:51:38 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/16 11:05:33 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/20 10:23:32 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,23 +30,33 @@ void	PhoneBook::ADD(int i)
 {
 	std::string	var;
 
+	if (std::cin.eof())
+		return ;
 	std::cout << "enter your first name : ";
 	fflush(stdin);
 	std::getline(std::cin, var);
 	if (!var.empty())
 		contact[i].set_firstname(var);
+	if (std::cin.eof())
+		return ;
 	std::cout << "enter your last name : ";
 	std::getline(std::cin, var);
 	if (!var.empty())
 		contact[i].set_lastname(var);
+	if (std::cin.eof())
+		return ;
 	std::cout << "enter your neck name : ";
 	std::getline(std::cin, var);
 	if (!var.empty())
 		contact[i].set_neckname(var);
+	if (std::cin.eof())
+		return ;
 	std::cout << "enter your phone number : ";
 	std::getline(std::cin, var);
 	if (!var.empty())
 		contact[i].set_phonenumber(var);
+	if (std::cin.eof())
+		return ;
 	std::cout << "enter your darket secret : ";
 	std::getline(std::cin, var);
 	if (!var.empty())
