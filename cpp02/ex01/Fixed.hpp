@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:03:42 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/16 13:57:13 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/27 13:31:22 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Fixed
 		static const int raw;
 	public :
 		Fixed();
-		Fixed(const int fixed_point);
-		Fixed(const float fixed_point);
+		Fixed(const int IntNbr);
+		Fixed(const float FloatNbr);
 		Fixed(const Fixed& copy);
 		~Fixed();
 		int		getRawBits (void);

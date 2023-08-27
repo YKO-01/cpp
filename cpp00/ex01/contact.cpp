@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 09:08:42 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/07/19 10:15:48 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/25 19:05:31 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 
 Contact::Contact(void)
 {
+}
+
+Contact::Contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds)
+{
+    firstname = fn;
+    lastname = ln;
+    neckname = nn;
+    phone_num = pn;
+    secret = ds;
 }
 
 std::string Contact::get_firstname()
@@ -61,4 +70,14 @@ void    Contact::set_phonenumber(std::string pnumber)
 void    Contact::set_secret(std::string dsecret)
 {
     secret = dsecret;
+}
+
+Contact& Contact::operator = (const Contact& contact)
+{
+    this->firstname = contact.firstname;
+    this->lastname = contact.lastname;
+    this->neckname = contact.neckname;
+    this->phone_num = contact.phone_num;
+    this->secret = contact.secret;
+    return (*this);
 }

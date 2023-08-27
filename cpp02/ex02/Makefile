@@ -6,7 +6,7 @@
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/16 12:57:40 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/08/17 10:42:58 by ayakoubi         ###   ########.fr        #
+#    Updated: 2023/08/21 11:49:20 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = fixed
 CPP = c++
 CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC := main Fixed operators
+SRC := main Fixed
 
 OBJ	:= $(addsuffix .o, $(SRC))
 SRC := $(addsuffix .cpp, $(SRC))

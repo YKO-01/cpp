@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 12:59:59 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/17 11:31:42 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/21 11:46:53 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ class Fixed
 		Fixed operator -- ();
 		Fixed operator ++ (int);
 		Fixed operator -- (int);
+		static const Fixed& min(const Fixed& fixed1, const Fixed& fixed2);
+		static const Fixed& max(const Fixed& fixed1, const Fixed& fixed2);
 };
 
 
