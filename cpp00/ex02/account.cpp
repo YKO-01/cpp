@@ -6,12 +6,13 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:08:07 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/28 20:04:29 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/28 20:46:26 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <iomanip>
 #include <ctime>
 
 int	Account::_nbAccounts = 0;
@@ -125,13 +126,9 @@ void	Account::displayStatus( void ) const
 
 void	Account::_displayTimestamp( void )
 {
-	std::time_t currentTime = std::time(nullptr);
-
-    // Convert the time to a C-style time structure
-    std::tm* localTime = std::localtime(&currentTime);
-    
-    // Format and print the current time
+	std::time_t cur_time = std::time(0);
+    std::tm* local_time = std::localtime(&cur_time);
     char timeBuffer[80];
-    std::strftime(timeBuffer, sizeof(timeBuffer), "%c", localTime);
-    std::cout << "[" << timeBuffer << "] ";
+    std::strftime(timeBuffer, sizeof(timeBuffer), "[%Y%M%d_%OH%OM%OS] ", local_time);
+    std::cout << timeBuffer;
 }

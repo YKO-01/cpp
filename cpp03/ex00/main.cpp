@@ -6,7 +6,15 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/27 14:55:12 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/28 20:17:21 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+int main()
+{
+    ClapTrap clap("foo");
+    clap.attack("hello");
+    return (0);
+}
