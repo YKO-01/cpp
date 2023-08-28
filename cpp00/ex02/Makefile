@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/06 10:59:48 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/08/28 13:17:41 by ayakoubi         ###   ########.fr        #
+#    Created: 2023/08/28 13:17:23 by ayakoubi          #+#    #+#              #
+#    Updated: 2023/08/28 13:19:01 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phonebook
+NAME	=	account
 
 ############### COMAPILATION ################
 
@@ -19,7 +19,7 @@ CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 ############### SRCS & OBJS ################
 
-SRC		=	main.cpp phonebook.cpp contact.cpp
+SRC		=	tests.cpp Account.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
 
@@ -51,4 +51,3 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re
-
