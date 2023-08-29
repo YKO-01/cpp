@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 19:51:38 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/27 15:36:15 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/29 15:13:49 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,5 @@ void	PhoneBook::SEARCH(int i)
 		else
 			std::cout << "invalid index\n";
 	}
-	this->display_contact(n);
+	this->display_all_info(n);
 }
