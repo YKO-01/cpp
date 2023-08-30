@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 19:51:38 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/29 15:13:49 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:26:09 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ void	PhoneBook::ADD(int i)
 	{
 		std::cout << arr[index];
 		std::getline(std::cin, var[index]);
-		if (var[index].empty())
-			index--;
 		if (std::cin.eof())
 			return ;
+		if (var[index].empty())
+			index--;
 	}
 	contact[i] = Contact(var[0], var[1], var[2], var[3], var[4]);
 }
@@ -40,8 +40,6 @@ void	PhoneBook::display_contact(int i)
 	int index;
 	int j;
 
-	if (std::cin.eof())
-		return ;
 	std::cout << std::setw(10) << std::left << "index" << "|";
 	std::cout << std::setw(10) << std::left << "firstname" << "|";
 	std::cout << std::setw(10) << std::left << "lastname" << "|";
@@ -68,8 +66,6 @@ void	PhoneBook::display_contact(int i)
 
 void	PhoneBook::display_all_info(int index)
 {
-	if (std::cin.eof())
-		return ;
 	std::cout << "first name\t:\t" << contact[index].get_firstname() << std::endl;
 	std::cout << "last name\t:\t" << contact[index].get_lastname() << std::endl;
 	std::cout << "neck name\t:\t" << contact[index].get_neckname() << std::endl;
@@ -89,12 +85,12 @@ void	PhoneBook::SEARCH(int i)
 		return ;
 	}
 	this->display_contact(i);
-	if (std::cin.eof())
-		return ;
 	while (1)
 	{
 		std::cout << "enter index : ";
 		std::cin >> index;
+		if (std::cin.eof())
+			return ;
 		n = atoi(index.c_str());
 		n--;
 		if (n >= 0 && n < i)

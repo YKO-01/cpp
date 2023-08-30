@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 10:18:06 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/27 13:36:20 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/08/30 13:28:29 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int main()
 	{
 		std::cout << "enter your choise : ";
 		std::cin >> ch;
+		if (std::cin.eof())
+			break ;
 		std::cout << "\n";
-		//if (i >= 8)
 		if (ch == "ADD")
 		{
 			phone.ADD(i % 8);
