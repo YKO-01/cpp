@@ -16,9 +16,9 @@
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
-	hit_points = 10;
-	energy_points = 10;
-	attack_damage = 0;
+	hit_points = 100;
+	energy_points = 50;
+	attack_damage = 20;
 	std::cout << "Constructor " << name << " called" << std::endl;
 }
 

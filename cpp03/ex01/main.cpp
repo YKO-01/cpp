@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
+	ScavTrap scav("hello");
+/*
     ClapTrap clap("foo");
     clap.attack("hello");
     clap.attack("hello");
@@ -30,6 +32,6 @@ int main()
     clap.beRepaired(10);
     clap.takeDamage(15);
 
-
+*/
 	return (0);
 }

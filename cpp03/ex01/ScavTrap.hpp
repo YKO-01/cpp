@@ -4,10 +4,10 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap :public ClaptTrap
+class ScavTrap : public ClapTrap
 {
-	puplic :
+	public:
+		ScavTrap(std::string name);
 		void guardGate();
-
-
+};
 #endif

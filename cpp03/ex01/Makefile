@@ -15,8 +15,8 @@ NAME = claptrap
 CPP = c++
 CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC := main ClapTrap
-
+SRC := main ClapTrap ScavTrap
+			
 OBJ	:= $(addsuffix .o, $(SRC))
 SRC := $(addsuffix .cpp, $(SRC))
 
