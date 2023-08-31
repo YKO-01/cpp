@@ -12,6 +12,7 @@
 
 #include "ClapTrap.hpp"
 
+//==============	Constructor	================
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
@@ -21,11 +22,13 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "Constructor " << name << " called" << std::endl;
 }
 
+//==============	Destructor	================
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Destructor " << name << " called" << std::endl;
 }
 
+//==============	Attack		================
 void	ClapTrap::attack(const std::string& target)
 {
 	if (hit_points > 0 && energy_points > 0)
@@ -38,6 +41,8 @@ void	ClapTrap::attack(const std::string& target)
 	}
 	std::cout << "ClapTrap " << name << "can't attacking " << target;
 }
+
+//==============	Take Damage	================
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (hit_points > 0 && energy_points > 0)
@@ -52,6 +57,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "ClapTrap " << name << " can't take damage" << std::endl;
 }
 
+//==============	Be Repaired	================
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (hit_points > 0 && energy_points > 0)
@@ -65,3 +71,45 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	std::cout << "Claptrap " << name << " can't be repaired" << std::endl;
 }
+
+//===============	Get Members	================
+std::string 	ClapTrap::getName()
+{
+	return (name);
+}
+
+int	ClapTrap::getHitPoints()
+{
+	return (hit_points);
+}
+
+int	ClapTrap::getEnergyPoints()
+{
+	return (energy_points);
+}
+int	ClapTrap::getAttackDamage()
+{
+	return (attack_damage);
+}
+
+//==============	Set Members	==================
+void	ClapTrap::setName(std::string Name)
+{
+	name = Name;
+}
+
+void	ClapTrap::setHitPoint(int HitPoints)
+{
+	hit_points = HitPoints;
+}
+
+void	ClapTrap::setEnergyPoint(int EnergyPoints)
+{
+	energy_points = EnergyPoints;
+}
+
+void	ClapTrap::setAttackDamage(int AttackDamage)
+{
+	attack_damage = AttackDamage;
+}
+
