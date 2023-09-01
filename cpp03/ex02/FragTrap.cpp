@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 17:46:18 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 17:46:19 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/01 17:51:32 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/01 20:40:51 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "FragTrap.hpp"
 
-
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		void attack(const std::string& target);
-		void guardGate();
-};
-#endif
+    setHitPoint(100);
+	setEnergyPoint(100);
+	setAttackDamage(30);
+    std::cout << "Constructor FragTrap Called" << std::endl;
+}
+
+FragTrap::~FragTrap()
+{
+    std::cout << "Destructor FragTrap Called" << std::endl;
+}
+
+void    FragTrap::highFivesGuys()
+{
+    std::cout << "high fives" << std::endl;
+}

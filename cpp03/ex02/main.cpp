@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 17:46:18 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 17:46:19 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/01 20:32:34 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int main()
 {
-	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		void attack(const std::string& target);
-		void guardGate();
-};
-#endif
+    ClapTrap *ct1 = new ScavTrap("korama");
+    ClapTrap *ct2 = new FragTrap("nano");
+
+    ct1->attack("bigo");
+    ct2->attack("madara");
+
+
+    delete(ct1);
+    delete(ct2);
+	// ScavTrap scav("bigo");
+
+    // scav.attack("anemy");
+    // scav.takeDamage(15);
+    // scav.beRepaired(8);
+    // scav.guardGate();
+	return (0);
+}

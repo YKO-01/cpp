@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 15:15:56 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 20:36:51 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/01 20:27:05 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
-	hit_points = 10;
-	energy_points = 10;
-	attack_damage = 0;
+	hit_points = 100;
+	energy_points = 100;
+	attack_damage = 30;
 	std::cout << "Constructor ClapTrap " << name << " called" << std::endl;
 }
 
@@ -39,7 +39,7 @@ void	ClapTrap::attack(const std::string& target)
 			<< attack_damage << " points of damage" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << name << " can't attacking " << target << std::endl;;
+	std::cout << "ClapTrap " << name << "can't attacking " << target;
 }
 
 //==============	Take Damage	================

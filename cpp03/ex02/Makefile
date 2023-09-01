@@ -6,16 +6,16 @@
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 20:20:33 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/09/01 17:45:01 by ayakoubi         ###   ########.fr        #
+#    Updated: 2023/09/01 20:27:29 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap
+NAME = FragTrap
 
 CPP = c++
 CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC := main ClapTrap ScavTrap
+SRC := main ClapTrap ScavTrap FragTrap
 			
 OBJ	:= $(addsuffix .o, $(SRC))
 SRC := $(addsuffix .cpp, $(SRC))

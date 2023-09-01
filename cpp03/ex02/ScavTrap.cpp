@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 17:46:10 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 20:39:23 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/01 17:46:39 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/01 20:40:21 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ void	ScavTrap::attack(const std::string& target)
 			<< getAttackDamage() << " points of damage" << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << getName() << " can't attacking " << target << std::endl;
+	std::cout << "ScavTrap " << getName() << "can't attacking " << target;
 }
