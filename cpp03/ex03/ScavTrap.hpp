@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 11:31:14 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/02 13:28:41 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/01 17:46:43 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/01 17:46:44 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-int main()
+
+#include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-    Zombie  *zombie;
-    zombie = newZombie("dynami");
-    zombie->announce();
-    randomChump("foo");
-    delete zombie;
-    return (0);
-}
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+};
+#endif

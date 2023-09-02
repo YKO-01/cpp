@@ -6,15 +6,15 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:03:54 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/20 11:33:38 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/02 13:28:22 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::announce()
+
+Zombie::Zombie()
 {
-	std::cout << this->name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::Zombie(std::string name)
@@ -22,21 +22,13 @@ Zombie::Zombie(std::string name)
 	this->name = name;
 }
 
+
 Zombie::~Zombie()
 {
 	std::cout << "destroy.." << std::endl;
 }
 
-Zombie*	newZombie(std::string name)
+void	Zombie::announce()
 {
-	Zombie*	newZombie;
-	newZombie = new Zombie(name);
-	// return (new Zombie(name));
-	return (newZombie);
-}
-
-void	randomChump(std::string name )
-{
-	Zombie z(name);
-	z.announce();
+	std::cout << this->name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 11:31:14 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/02 13:28:41 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/01 17:45:53 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/01 17:51:07 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main()
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-    Zombie  *zombie;
-    zombie = newZombie("dynami");
-    zombie->announce();
-    randomChump("foo");
-    delete zombie;
-    return (0);
-}
+    public:
+        FragTrap(std::string name);
+        ~FragTrap();
+        void highFivesGuys(void);
+};
+
+#endif

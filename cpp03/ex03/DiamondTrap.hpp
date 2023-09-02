@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 11:31:14 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/02 13:28:41 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/02 13:05:01 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/02 13:14:41 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-int main()
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+
+class DiamondTrap : public ScavTrap , public FragTrap
 {
-    Zombie  *zombie;
-    zombie = newZombie("dynami");
-    zombie->announce();
-    randomChump("foo");
-    delete zombie;
-    return (0);
-}
+	public :
+		DiamondTrap(std::string name);
+};
+
+
+#endif

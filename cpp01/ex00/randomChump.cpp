@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/19 11:31:14 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/02 13:28:41 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/02 13:20:04 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/02 13:20:42 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+void	randomChump(std::string name )
 {
-    Zombie  *zombie;
-    zombie = newZombie("dynami");
-    zombie->announce();
-    randomChump("foo");
-    delete zombie;
-    return (0);
+	Zombie z(name);
+	z.announce();
 }

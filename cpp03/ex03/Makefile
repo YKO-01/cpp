@@ -5,19 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/19 11:31:49 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/09/02 13:22:41 by ayakoubi         ###   ########.fr        #
+#    Created: 2023/08/28 20:20:33 by ayakoubi          #+#    #+#              #
+#    Updated: 2023/09/01 20:27:29 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Zombie
+NAME = FragTrap
 
-CPP			=	c++
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CPP = c++
+CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC			:= main	Zombie newZombie randomChump
-OBJ			:= $(addsuffix .o, $(SRC))
-SRC			:= $(addsuffix .cpp, $(SRC))
+SRC := main ClapTrap ScavTrap FragTrap
+			
+OBJ	:= $(addsuffix .o, $(SRC))
+SRC := $(addsuffix .cpp, $(SRC))
 
 RED = \033[1;31m
 GREEN = \033[1;32m

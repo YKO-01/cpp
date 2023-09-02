@@ -6,11 +6,11 @@
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/02 17:03:39 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/08/16 11:42:31 by ayakoubi         ###   ########.fr        #
+#    Updated: 2023/09/02 14:59:03 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	brain
+NAME	=	main
 
 CPP			=	c++
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
