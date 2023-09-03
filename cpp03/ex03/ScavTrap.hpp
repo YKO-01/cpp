@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:46:43 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 17:46:44 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/03 21:33:02 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap :virtual public ClapTrap
 {
 	public:
 		ScavTrap(std::string name);

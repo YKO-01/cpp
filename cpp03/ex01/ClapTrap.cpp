@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 15:15:56 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 20:36:51 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/03 11:04:15 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	std::cout << "Claptrap " << name << " can't be repaired" << std::endl;
 }
-
+/*
 //===============	Get Members	================
 std::string 	ClapTrap::getName()
 {
@@ -113,3 +113,4 @@ void	ClapTrap::setAttackDamage(int AttackDamage)
 	attack_damage = AttackDamage;
 }
 
+*/

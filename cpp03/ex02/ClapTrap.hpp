@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:48 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 20:26:41 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:35:02 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private :
+	protected :
 		std::string name;
 		int hit_points;
 		int energy_points;
@@ -26,20 +26,19 @@ class ClapTrap
 	public :
 		ClapTrap(std::string name);
 		virtual ~ClapTrap();
-
+		
 		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
 		// Get And Set
-		std::string	getName();
-		int		getHitPoints();
-		int		getEnergyPoints();
-		int		getAttackDamage();
-		void		setName(std::string Name);
-		void		setHitPoint(int HitPoints);
-		void		setEnergyPoint(int EnergyPoints);
-		void		setAttackDamage(int AttackDamage);
+		// std::string	getName();
+		// int		getHitPoints();
+		// int		getEnergyPoints();
+		// int		getAttackDamage();
+		// void		setName(std::string Name);
+		// void		setHitPoint(int HitPoints);
+		// void		setEnergyPoint(int EnergyPoints);
+		// void		setAttackDamage(int AttackDamage);
 };
-
 #endif

@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 22:41:35 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/03 20:53:52 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,21 @@ void attack_func(ClapTrap *var)
 int main()
 {
     
-    ClapTrap *clap = new ClapTrap("Clap");
-    ScavTrap *scav = new ScavTrap("Scav");
+    // ClapTrap *clap = new ClapTrap("Clap");
+    // ScavTrap *scav = new ScavTrap("Scav");
 
-    attack_func(clap);
-    attack_func(scav);
-    delete (clap);
+    // attack_func(clap);
+    // attack_func(scav);
+    // delete (clap);
 
     // ClapTrap *ct;
     // ScavTrap sc("bigo");
     // ct = &sc;
     // ct->attack("anemy");
 
-    // ScavTrap *sc = new ScavTrap("hello");
-    // sc->takeDamage(4);
+    ClapTrap *sc = new ScavTrap("hello");
+    //sc->takeDamage(4);
+    delete sc;
 
   //  ClapTrap *scav = new ScavTrap("bigo");
   //  scav->attack("bigo");

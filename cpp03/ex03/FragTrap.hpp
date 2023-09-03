@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:45:53 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 17:51:07 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/03 21:33:35 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap :virtual public ClapTrap
 {
     public:
         FragTrap(std::string name);
