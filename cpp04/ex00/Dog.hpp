@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:57:48 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/04 15:23:12 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/04 19:10:49 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main()
+#include "Animal.hpp"
+
+class Dog : public Animal
 {
-    DiamondTrap dt("bigo");
-    dt.attack("korama");
-    dt.whoAmI();
-	return (0);
-}
+    public :
+        Dog();
+        ~Dog();
+        void    makeSound() const;
+};
+
+#endif

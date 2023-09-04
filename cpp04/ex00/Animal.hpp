@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:57:48 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/03 21:51:22 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/04 19:10:45 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-int main()
+#include <iostream>
+
+class Animal
 {
-    DiamondTrap dt("bigo");
-    dt.attack("korama");
-    dt.whoAmI();
-	return (0);
-}
+    protected :
+        std::string type;
+    public :
+        Animal();
+        virtual ~Animal();
+        virtual void makeSound() const;
+        std::string getType() const;
+};
+
+
+#endif

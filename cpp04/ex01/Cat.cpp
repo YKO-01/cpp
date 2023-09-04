@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:57:48 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/04 10:12:43 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/04 20:17:14 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Cat.hpp"
 
-int main()
+Cat::Cat()
 {
-    DiamondTrap dt("bigo");
-    dt.attack("korama");
-    dt.whoAmI();
-	return (0);
+	type = "Cat";
+	brain = new Brain();
+	std::cout << "Constructor Cat Called" << std::endl;
 }
+
+Cat::~Cat()
+{
+	std::cout << "Destroy Cat" << std::endl;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "cats don’t bark" << std::endl;
+}
+

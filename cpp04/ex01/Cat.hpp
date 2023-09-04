@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:57:48 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/04 10:08:44 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/04 20:08:04 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
 
-int main()
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Cat : public Animal
 {
-    DiamondTrap dt("bigo");
-    dt.attack("korama");
-    dt.whoAmI();
-	return (0);
-}
+	private :
+		Brain *brain;
+	public :
+		Cat();
+		~Cat();
+		void	makeSound() const;
+};
+
+
+#endif

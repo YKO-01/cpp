@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:57:48 by ayakoubi         ###   ########.fr       */
+/*   Created: 2023/09/04 20:01:53 by ayakoubi          #+#    #+#             */
+/*   Updated: 2023/09/04 20:04:33 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Brain.hpp"
 
-int main()
+Brain::Brain()
 {
-    DiamondTrap dt("bigo");
-    dt.attack("korama");
-    dt.whoAmI();
-	return (0);
+	std::cout << "Constructor Brain Called" << std::endl;
 }
+
+Brain::~Brain()
+{
+	std::cout << "Destroy Brain" << std::endl;
+}
+
