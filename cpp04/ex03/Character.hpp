@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 22:13:35 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/05 23:24:33 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/06 17:42:07 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ class Character : public ICharacter
 		std::string name;
 		int indexSlot;
 		int indexFloot;
-		AMateria *slot[4];
-		AMateria *floor[4];
+		AMateria **slot;
+		AMateria **floor;
 	public :
+		Character();
 		Character(std::string name);
+		Character(const Character& ch);
 		~Character();
 		std::string const &getName() const;
 		void	equip(AMateria* m);

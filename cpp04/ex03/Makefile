@@ -6,18 +6,18 @@
 #    By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 19:44:37 by ayakoubi          #+#    #+#              #
-#    Updated: 2023/09/05 19:52:42 by ayakoubi         ###   ########.fr        #
+#    Updated: 2023/09/06 15:22:55 by ayakoubi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = amateria
 
-CPP = c++
-CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
+CPP =  clang++
+CPPFLAGS  = -W -Wall -Werror
 
 OBJDIR = obj
 
-SRC := main AMateria Ice Cure
+SRC := main AMateria Ice Cure Character MateriaSource
 			
 OBJ	:= $(addprefix $(OBJDIR)/, $(addsuffix .o, $(SRC)))
 SRC := $(addsuffix .cpp, $(SRC))
