@@ -33,6 +33,12 @@ MateriaSource::MateriaSource(const MateriaSource& ms)
 MateriaSource::~MateriaSource()
 {	
 	std::cout << "Destroy MateriaSource" << std::endl;
+	int	i;
+
+	i = -1;
+	while(++i < 4)
+		delete arr[i];
+	delete arr;
 }
 
 
