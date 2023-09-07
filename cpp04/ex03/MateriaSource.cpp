@@ -21,6 +21,7 @@ MateriaSource::MateriaSource()
 	arr = new AMateria*[4];
 	while (i++ < 4)
 		arr[i] = NULL;
+	std::cout << "Constructor MateriaSource Called" << std::endl;
 	
 }
 
@@ -30,28 +31,28 @@ MateriaSource::MateriaSource(const MateriaSource& ms)
 }
 
 MateriaSource::~MateriaSource()
-{
+{	
 	std::cout << "Destroy MateriaSource" << std::endl;
 }
 
+
 void	MateriaSource::learnMateria(AMateria* m)
 {
-	if (index > 4)
-	{
+	if (index < 4)
 		arr[index++] = m->clone();
-	}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const& type)
 {
 	int i = 0;
-	while (i++ < 4)
+	while (i < 4)
 	{
 		if (arr[i] != NULL)
 		{
-			if (type == arr[i]->getType())
+			if (arr[i]->getType() == type)
 				return (arr[i]->clone());
 		}
+		i++;
 	}
 
 	return (0);

@@ -42,7 +42,7 @@ all : $(NAME)
 
 clean :
 	@echo "$(RED) REMOVED OBJ $(RESET)"
-	@rm -rf $(OBJ)
+	@rm -rf $(OBJDIR)
 
 fclean : clean
 	@echo "$(RED) REMOVED $(NAME) $(RESET)"
