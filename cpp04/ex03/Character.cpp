@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 22:37:27 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/06 17:43:54 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/07 20:55:53 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ Character::Character(std::string name)
 	indexSlot = 0;
 	indexFloot = 0;
 	slot = new AMateria*[4];
-	i = 0;
-	while (i++ < 4)
-		slot[i] = NULL;
 	floor = new AMateria*[4];
 	i = 0;
 	while (i++ < 4)
+	{
+		slot[i] = NULL;
 		floor[i] = NULL;
+	}
 	std::cout << "Constructor Character Called" << std::endl;
 }
 
@@ -42,6 +42,15 @@ Character::Character(const Character& ch)
 
 Character::~Character()
 {
+	int i;
+	i = -1;
+	while (++i < 4)
+	{
+		delete slot[i];
+		delete floor[i];
+	}
+	delete slot;
+	delete floor;
 	std::cout << "Destroy Character" << std::endl;
 }
 
