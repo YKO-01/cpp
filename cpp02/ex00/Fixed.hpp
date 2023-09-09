@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 23:41:52 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/13 14:58:55 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:05:21 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ class Fixed
 {
 	private :
 		int fixed_point;
-		static const int raw;
+		static const int fract;
 	public :
 		Fixed();
 		Fixed(const Fixed& copy);
 		~Fixed();
 		Fixed& operator = (const Fixed& copy);
-		int		getRawBits (void);
-		void	setRawBits(int const raw);		
+		int		getRawBits (void) const;
+		void	setRawBits(int const raw);	
 };
 
 #endif

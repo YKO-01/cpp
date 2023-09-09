@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:48 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/03 21:28:26 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:57:27 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class ClapTrap
 		int energy_points;
 		int attack_damage;
 	public :
+		ClapTrap();
+		ClapTrap(const ClapTrap& cTrap);
 		ClapTrap(std::string name);
 		virtual ~ClapTrap();
 		

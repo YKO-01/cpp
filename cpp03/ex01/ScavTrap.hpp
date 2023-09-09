@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:46:18 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/03 20:55:08 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:40:45 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+		ScavTrap();
+		ScavTrap(const ScavTrap& sTrap);
 		ScavTrap(std::string name);
 		~ScavTrap();
 		void attack(const std::string& target);

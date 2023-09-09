@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 13:05:01 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/04 09:51:57 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 19:00:06 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 class DiamondTrap : public ScavTrap , public FragTrap
 {
 	public :
+		DiamondTrap();
+		DiamondTrap(const DiamondTrap& dTrap);
 		DiamondTrap(std::string name);
 		~DiamondTrap();
 		void whoAmI();

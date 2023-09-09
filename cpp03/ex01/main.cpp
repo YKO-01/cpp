@@ -6,54 +6,27 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/03 20:53:52 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 19:08:24 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-void attack_func(ClapTrap *var)
-{
-  var->attack("enemy");
-}
-
 int main()
-{
-    
-    // ClapTrap *clap = new ClapTrap("Clap");
-    // ScavTrap *scav = new ScavTrap("Scav");
+{    
+    ScavTrap scav("bigo");
 
-    // attack_func(clap);
-    // attack_func(scav);
-    // delete (clap);
-
-    // ClapTrap *ct;
-    // ScavTrap sc("bigo");
-    // ct = &sc;
-    // ct->attack("anemy");
-
-    ClapTrap *sc = new ScavTrap("hello");
-    //sc->takeDamage(4);
-    delete sc;
-
-  //  ClapTrap *scav = new ScavTrap("bigo");
-  //  scav->attack("bigo");
-  //  delete (scav);
-  //   system("leaks ScavTrap");
-    
-    // ScavTrap scav("bigo");
-
-    // scav.attack("anemy");
-    // scav.takeDamage(15);
-    // scav.beRepaired(8);
-    // scav.takeDamage(65);
-    // scav.attack("anemy");
-    // scav.takeDamage(20);
-    // scav.attack("anemy");
-    // scav.takeDamage(15);
-    // scav.attack("anemy");
-    // scav.takeDamage(40);
-    // scav.attack("hhhhh");
-    // scav.guardGate();
+    scav.attack("anemy");
+    scav.takeDamage(15);
+    scav.beRepaired(8);
+    scav.takeDamage(65);
+    scav.attack("anemy");
+    scav.takeDamage(20);
+    scav.attack("anemy");
+    scav.takeDamage(15);
+    scav.attack("anemy");
+    scav.takeDamage(40);
+    scav.attack("hhhhh");
+    scav.guardGate();
 	return (0);
 }

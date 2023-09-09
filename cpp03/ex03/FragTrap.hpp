@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:45:53 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/03 21:33:35 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:58:45 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class FragTrap :virtual public ClapTrap
 {
     public:
+        FragTrap();
+        FragTrap(const FragTrap& fTrap);
         FragTrap(std::string name);
         ~FragTrap();
         void highFivesGuys(void);

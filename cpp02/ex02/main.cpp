@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 12:57:52 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/08/21 11:49:37 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:13:03 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	Fixed a;
+	Fixed a; 
 	Fixed const b( Fixed(5.05f) * Fixed( 2 ) );
 	
 	std::cout << a << std::endl;

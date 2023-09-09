@@ -6,7 +6,7 @@
 /*   By: ayakoubi <ayakoubi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:55:11 by ayakoubi          #+#    #+#             */
-/*   Updated: 2023/09/01 20:32:34 by ayakoubi         ###   ########.fr       */
+/*   Updated: 2023/09/09 19:09:02 by ayakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int main()
 
     delete(ct1);
     delete(ct2);
-	// ScavTrap scav("bigo");
+	ScavTrap scav("bigo");
 
-    // scav.attack("anemy");
-    // scav.takeDamage(15);
-    // scav.beRepaired(8);
-    // scav.guardGate();
+    scav.attack("anemy");
+    scav.takeDamage(15);
+    scav.beRepaired(8);
+    scav.guardGate();
 	return (0);
 }
